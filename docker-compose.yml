@@ -1,8 +1,5 @@
 services:
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile.web
     image: ghcr.io/faeznz/porto-cc-dwrsma-web:latest
     container_name: porto-cc-dwrsma-web
     hostname: porto-cc-dwrsma-web
