@@ -106,7 +106,7 @@ export default function Portfolio() {
                         href={item.youtube}
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
+                        onClick={(e) => { e.stopPropagation(); }}
                         className="text-xs text-white bg-red-500/80 px-3 py-1 rounded-full w-fit backdrop-blur-sm hover:bg-red-500 transition-colors pointer-events-auto"
                       >
                         Watch Video

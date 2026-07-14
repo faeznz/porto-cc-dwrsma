@@ -34,10 +34,10 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       }
     }
 
-    const cleanup = initLenis();
+    const cleanupPromise = initLenis();
 
     return () => {
-      if (cleanup) cleanup.then((fn) => fn?.());
+      cleanupPromise.then((fn) => fn?.()).catch(() => {});
     };
   }, []);
 
