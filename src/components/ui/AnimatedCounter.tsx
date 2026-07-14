@@ -13,7 +13,6 @@ export default function AnimatedCounter({ value, label }: AnimatedCounterProps) 
   const isInView = useInView(ref, { once: true, margin: "-50px" });
   const [displayValue, setDisplayValue] = useState(0);
 
-  const numValue = parseInt(value.replace(/[^0-9]/g, "")) || 0;
   const suffix = value.replace(/[0-9]/g, "");
 
   const count = useSpring(0, {
@@ -33,7 +32,7 @@ export default function AnimatedCounter({ value, label }: AnimatedCounterProps) 
         animate={isInView ? { opacity: 1, scale: 1 } : {}}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        {isInView ? `${displayValue}${suffix}` : `0${suffix}`}
+        {isInView ? `${String(displayValue)}${suffix}` : `0${suffix}`}
       </motion.div>
       <div className="text-sm text-gray-500 mt-1">{label}</div>
     </div>

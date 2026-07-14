@@ -39,7 +39,7 @@ export default function Skills() {
     >
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {skills.map((skill, index) => {
-          const Icon = iconMap[skill.icon] || Camera;
+          const Icon = iconMap[skill.icon] ?? Camera;
 
           return (
             <ScrollReveal key={skill.name} delay={index * 0.05}>

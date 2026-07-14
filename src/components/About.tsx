@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";

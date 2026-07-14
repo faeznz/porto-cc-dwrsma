@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
-import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import { portfolioItems } from "@/data/portfolio";
 import { PortfolioCategory } from "@/types";
@@ -39,7 +38,7 @@ export default function Portfolio() {
         {categories.map((cat) => (
           <button
             key={cat}
-            onClick={() => setActiveCategory(cat)}
+            onClick={() => { setActiveCategory(cat); }}
             className={cn(
               "px-5 py-2 rounded-full text-sm font-medium transition-all duration-300",
               activeCategory === cat
@@ -99,8 +98,8 @@ export default function Portfolio() {
 
       {lightboxIndex !== null && (
         <Lightbox
-          open={lightboxIndex !== null}
-          close={() => setLightboxIndex(null)}
+          open={true}
+          close={() => { setLightboxIndex(null); }}
           index={lightboxIndex}
           slides={lightboxImages}
           plugins={[Zoom]}
