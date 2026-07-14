@@ -9,6 +9,7 @@ services:
     restart: unless-stopped
     environment:
       - PORT=3457
+      - HOSTNAME=0.0.0.0
     networks:
       - dokploy-network
 
