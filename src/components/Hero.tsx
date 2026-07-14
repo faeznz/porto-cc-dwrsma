@@ -21,7 +21,7 @@ export default function Hero() {
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    return () => { window.removeEventListener("mousemove", handleMouseMove); };
   }, []);
 
   const containerVariants = {
@@ -50,19 +50,19 @@ export default function Hero() {
       <div
         className="absolute top-20 left-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl"
         style={{
-          transform: `translate(${mousePos.x * 30}px, ${mousePos.y * 30}px)`,
+          transform: `translate(${String(mousePos.x * 30)}px, ${String(mousePos.y * 30)}px)`,
         }}
       />
       <div
         className="absolute bottom-20 right-10 w-80 h-80 bg-secondary/20 rounded-full blur-3xl"
         style={{
-          transform: `translate(${mousePos.x * -20}px, ${mousePos.y * -20}px)`,
+          transform: `translate(${String(mousePos.x * -20)}px, ${String(mousePos.y * -20)}px)`,
         }}
       />
       <div
         className="absolute top-1/2 left-1/2 w-48 h-48 bg-accent/20 rounded-full blur-3xl"
         style={{
-          transform: `translate(${-50 + mousePos.x * 40}%, ${-50 + mousePos.y * 40}%)`,
+          transform: `translate(${String(-50 + mousePos.x * 40)}%, ${String(-50 + mousePos.y * 40)}%)`,
         }}
       />
 

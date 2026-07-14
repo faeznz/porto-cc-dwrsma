@@ -1,0 +1,18 @@
+services:
+  web:
+    image: ghcr.io/faeznz/porto-cc-dwrsma-web:latest
+    container_name: porto-cc-dwrsma-web
+    hostname: porto-cc-dwrsma-web
+    pull_policy: always
+    ports:
+      - "3457:3457"
+    restart: unless-stopped
+    environment:
+      - PORT=3457
+      - HOSTNAME=0.0.0.0
+    networks:
+      - dokploy-network
+
+networks:
+  dokploy-network:
+    external: true
