@@ -72,10 +72,10 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 8,
-    title: "Weekend Getaway",
+    title: "Video Profil Perpustakaan UIN Sunan Kalijaga Yogyakarta",
     category: "Assistant Director (Visual)",
-    client: "Personal Project",
-    image: "/images/portfolio/travel-2.svg",
+    client: "UIN Sunan Kalijaga",
+    image: "/images/portfolio/youtube-assistant-director.jpg",
     instagram: "https://instagram.com/p/example8",
     youtube: "https://youtu.be/LJyl_kTItjc",
   },
