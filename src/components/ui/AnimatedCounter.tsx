@@ -16,10 +16,7 @@ export default function AnimatedCounter({ value, label }: AnimatedCounterProps) 
   const numValue = parseInt(value.replace(/[^0-9]/g, "")) || 0;
   const suffix = value.replace(/[0-9]/g, "");
 
-  const count = useSpring(0, {
-    duration: 2000,
-    bounce: 0,
-  });
+  const count = useSpring(0, { stiffness: 50, damping: 20 });
 
   useMotionValueEvent(count, "change", (latest) => {
     setDisplayValue(Math.round(latest));

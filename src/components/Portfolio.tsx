@@ -12,7 +12,7 @@ import { portfolioItems } from "@/data/portfolio";
 import { PortfolioCategory } from "@/types";
 import { cn } from "@/lib/utils";
 
-const categories: PortfolioCategory[] = ["All", "Beauty", "Travel", "Food", "Event"];
+const categories: PortfolioCategory[] = ["All", "Data Analyst Intern", "Student Employee – Tim Kreatif", "Staff Humas, Publikasi, & Dokumentasi (HPD)", "Assistant Director (Visual)"];
 
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState<PortfolioCategory>("All");
@@ -67,31 +67,55 @@ export default function Portfolio() {
               transition={{ duration: 0.3 }}
               className="break-inside-avoid"
             >
-              <button
-                onClick={() => {
-                  const idx = filtered.findIndex((f) => f.id === item.id);
-                  setLightboxIndex(idx);
-                }}
-                className="group relative w-full rounded-xl overflow-hidden cursor-pointer text-left"
-              >
-                <div className="relative w-full aspect-[4/5]">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+              <div className="group relative w-full rounded-xl overflow-hidden cursor-pointer text-left">
+                <button
+                  onClick={() => {
+                    const idx = filtered.findIndex((f) => f.id === item.id);
+                    setLightboxIndex(idx);
+                  }}
+                  className="w-full"
+                >
+                  <div className="relative w-full aspect-[4/5]">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    {item.youtube && (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                          <svg viewBox="0 0 24 24" className="w-6 h-6 ml-0.5 text-red-600" fill="currentColor">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </button>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 pointer-events-none">
                   <h3 className="text-white font-bold text-lg">{item.title}</h3>
                   <p className="text-white/80 text-sm">{item.category}</p>
                   <p className="text-white/60 text-xs mt-1">{item.client}</p>
-                  <span className="mt-2 text-xs text-white bg-white/20 px-3 py-1 rounded-full w-fit backdrop-blur-sm">
-                    View Detail
-                  </span>
+                  <div className="flex gap-2 mt-2">
+                    <span className="text-xs text-white bg-white/20 px-3 py-1 rounded-full w-fit backdrop-blur-sm">
+                      View Detail
+                    </span>
+                    {item.youtube && (
+                      <a
+                        href={item.youtube}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="text-xs text-white bg-red-500/80 px-3 py-1 rounded-full w-fit backdrop-blur-sm hover:bg-red-500 transition-colors pointer-events-auto"
+                      >
+                        Watch Video
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </button>
+              </div>
             </motion.div>
           ))}
         </AnimatePresence>

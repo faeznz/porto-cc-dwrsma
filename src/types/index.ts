@@ -41,10 +41,11 @@ export interface PortfolioItem {
   category: PortfolioCategory;
   client: string;
   image: string;
-  instagram: string;
+  instagram?: string;
+  youtube?: string;
 }
 
-export type PortfolioCategory = "All" | "Beauty" | "Fashion" | "Travel" | "Food" | "Event" | "Commercial";
+export type PortfolioCategory = "All" | "Data Analyst Intern" | "Student Employee – Tim Kreatif" | "Staff Humas, Publikasi, & Dokumentasi (HPD)" | "Assistant Director (Visual)";
 
 export interface InstagramPost {
   id: number;

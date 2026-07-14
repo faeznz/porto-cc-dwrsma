@@ -17,7 +17,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
     title: "Wardah Campaign",
-    category: "Beauty",
+    category: "Student Employee – Tim Kreatif",
     client: "Wardah",
     image: "/images/portfolio/beauty-1.svg",
     instagram: "https://instagram.com/p/example1",
@@ -25,7 +25,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: 2,
     title: "Traveling to Bali",
-    category: "Travel",
+    category: "Student Employee – Tim Kreatif",
     client: "Traveloka",
     image: "/images/portfolio/travel-1.svg",
     instagram: "https://instagram.com/p/example2",
@@ -33,7 +33,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: 3,
     title: "Summer Fashion Lookbook",
-    category: "Fashion",
+    category: "Student Employee – Tim Kreatif",
     client: "Zalora",
     image: "/images/portfolio/fashion-1.svg",
     instagram: "https://instagram.com/p/example3",
@@ -41,7 +41,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: 4,
     title: "Food Review: New Cafe",
-    category: "Food",
+    category: "Student Employee – Tim Kreatif",
     client: "Personal Brand",
     image: "/images/portfolio/food-1.svg",
     instagram: "https://instagram.com/p/example4",
@@ -49,7 +49,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: 5,
     title: "Music Festival Coverage",
-    category: "Event",
+    category: "Staff Humas, Publikasi, & Dokumentasi (HPD)",
     client: "Festival Musik",
     image: "/images/portfolio/event-1.svg",
     instagram: "https://instagram.com/p/example5",
@@ -57,7 +57,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: 6,
     title: "Skincare Product Launch",
-    category: "Beauty",
+    category: "Student Employee – Tim Kreatif",
     client: "Somethinc",
     image: "/images/portfolio/beauty-2.svg",
     instagram: "https://instagram.com/p/example6",
@@ -65,23 +65,24 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: 7,
     title: "Commercial Brand Video",
-    category: "Commercial",
-    client: "Gojek",
+    category: "Data Analyst Intern",
+    client: "LAN RI",
     image: "/images/portfolio/commercial-1.svg",
     instagram: "https://instagram.com/p/example7",
   },
   {
     id: 8,
     title: "Weekend Getaway",
-    category: "Travel",
-    client: "Airbnb",
+    category: "Assistant Director (Visual)",
+    client: "Personal Project",
     image: "/images/portfolio/travel-2.svg",
     instagram: "https://instagram.com/p/example8",
+    youtube: "https://youtu.be/LJyl_kTItjc",
   },
   {
     id: 9,
     title: "Makeup Tutorial Series",
-    category: "Beauty",
+    category: "Student Employee – Tim Kreatif",
     client: "Make Over",
     image: "/images/portfolio/beauty-3.svg",
     instagram: "https://instagram.com/p/example9",
