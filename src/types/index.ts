@@ -43,6 +43,7 @@ export interface PortfolioItem {
   image: string;
   instagram?: string;
   youtube?: string;
+  tiktok?: string;
 }
 
 export type PortfolioCategory = "All" | "Data Analyst Intern" | "Student Employee – Tim Kreatif" | "Staff Humas, Publikasi, & Dokumentasi (HPD)" | "Assistant Director (Visual)";

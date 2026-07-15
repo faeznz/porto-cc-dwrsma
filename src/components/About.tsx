@@ -3,7 +3,6 @@
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionWrapper from "@/components/ui/SectionWrapper";
-import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import { profile } from "@/data/profile";
 
 export default function About() {
@@ -37,19 +36,10 @@ export default function About() {
             </p>
           ))}
 
-          <div className="border-l-4 border-primary pl-4 py-2 bg-primary/5 rounded-r-lg">
-            <p className="text-gray-600 italic">{profile.story}</p>
+          <div className="border-l-4 border-primary pl-4 py-3 bg-primary/5 rounded-r-lg">
+            <p className="text-gray-600 italic text-sm leading-relaxed">{profile.story}</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-4">
-            {profile.stats.map((stat) => (
-              <AnimatedCounter
-                key={stat.label}
-                value={stat.value}
-                label={stat.label}
-              />
-            ))}
-          </div>
         </ScrollReveal>
       </div>
     </SectionWrapper>

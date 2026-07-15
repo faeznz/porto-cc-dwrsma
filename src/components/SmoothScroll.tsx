@@ -5,6 +5,7 @@ import { ReactNode, useEffect } from "react";
 export default function SmoothScroll({ children }: { children: ReactNode }) {
   useEffect(() => {
     let rafId: number;
+    let destroy: (() => void) | null = null;
 
     async function initLenis() {
       try {
@@ -25,7 +26,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
 
         rafId = requestAnimationFrame(raf);
 
-        return () => {
+        destroy = () => {
           cancelAnimationFrame(rafId);
           lenis.destroy();
         };

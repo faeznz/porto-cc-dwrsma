@@ -17,7 +17,7 @@ export const profile: Profile = {
     { value: "30+", label: "Konten" },
   ],
   socials: {
-    instagram: "https://instagram.com/dewirismawati",
+    instagram: "https://instagram.com/dwrsmaaa",
     tiktok: "https://tiktok.com/@dewirismawati",
     youtube: "https://youtube.com/@dewirismawati",
     email: "dewirismawati9702@gmail.com",

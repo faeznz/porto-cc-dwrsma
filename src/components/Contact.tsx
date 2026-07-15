@@ -26,7 +26,7 @@ const contacts = [
   {
     icon: Globe,
     label: "Instagram",
-    value: "@dewirismawati",
+    value: "@dwrsmaaa",
     href: profile.socials.instagram,
   },
   {
