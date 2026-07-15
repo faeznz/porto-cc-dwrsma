@@ -4,8 +4,7 @@ import { ReactNode, useEffect } from "react";
 
 export default function SmoothScroll({ children }: { children: ReactNode }) {
   useEffect(() => {
-    let rafId: number;
-    let destroy: (() => void) | null = null;
+    const rafId = { current: 0 as number };
 
     async function initLenis() {
       try {
@@ -21,13 +20,13 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
 
         function raf(time: number) {
           lenis.raf(time);
-          rafId = requestAnimationFrame(raf);
+          rafId.current = requestAnimationFrame(raf);
         }
 
-        rafId = requestAnimationFrame(raf);
+        rafId.current = requestAnimationFrame(raf);
 
-        destroy = () => {
-          cancelAnimationFrame(rafId);
+        return () => {
+          cancelAnimationFrame(rafId.current);
           lenis.destroy();
         };
       } catch (e) {
@@ -38,7 +37,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     const cleanupPromise = initLenis();
 
     return () => {
-      cleanupPromise.then((fn) => fn?.()).catch(() => {});
+      cleanupPromise.then((cleanup) => { if (cleanup) cleanup(); }).catch(() => {});
     };
   }, []);
 
