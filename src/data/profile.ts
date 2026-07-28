@@ -9,7 +9,7 @@ export const profile: Profile = {
     "Terbiasa dalam proses produksi konten dari riset tren, penyusunan konsep dan skrip, produksi video, hingga proses editing. Siap berkolaborasi dalam tim kreatif untuk menghasilkan konten yang berdampak.",
   ],
   story: "Perjalanan saya dimulai dari latar belakang Multimedia di SMK yang kemudian berkembang melalui berbagai pengalaman organisasi dan kepanitiaan di kampus. Dari menjadi Staff Humas, Publikasi, dan Dokumentasi hingga terlibat dalam proyek company profile instansi pemerintah, setiap pengalaman memperkuat kemampuan saya dalam berpikir kreatif dan terstruktur.",
-  photo: "/images/hero-photo.svg",
+  photo: "/riss-pink.png",
   stats: [
     { value: "3+", label: "Tahun Pengalaman" },
     { value: "4+", label: "Proyek Besar" },

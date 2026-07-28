@@ -73,14 +73,14 @@ export default function Hero() {
         animate="visible"
       >
         <motion.div
-          className="relative w-64 h-64 md:w-80 md:h-80 flex-shrink-0"
+          className="relative w-64 h-64 md:w-80 md:h-80 flex-shrink-0 hidden"
           variants={itemVariants}
         >
           <div
             className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent rounded-full animate-spin"
             style={{ animationDuration: "8s" }}
           />
-          <div className="absolute inset-1 bg-background rounded-full overflow-hidden">
+          <div className="absolute inset-1 rounded-full overflow-hidden">
             <Image
               src={profile.photo}
               alt={profile.name}
