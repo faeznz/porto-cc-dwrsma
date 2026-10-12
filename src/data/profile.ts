@@ -8,8 +8,8 @@ export const profile: Profile = {
     "Halo! Saya Dewi Rismawati, content creator yang berpengalaman dalam pembuatan konten untuk institusi pendidikan, kepanitiaan kampus, dan instansi pemerintah.",
     "Memiliki ketertarikan pada dunia **Fotografi** dan **Videografi**, serta terbiasa menjalani proses produksi konten mulai dari riset tren, penyusunan konsep dan skrip, produksi video, hingga tahap editing. Saya senang mengeksplorasi ide kreatif dan mengemasnya menjadi konten yang menarik, komunikatif, dan berdampak. Siap berkolaborasi dalam tim kreatif untuk menghasilkan karya yang berkualitas.",
   ],
-  story: "Perjalanan saya dimulai dari latar belakang Multimedia di SMK, yang kemudian berkembang melalui berbagai pengalaman organisasi dan kepanitiaan di kampus. Dari menjadi Staff Humas, Publikasi, dan Dokumentasi hingga terlibat dalam proyek company profile instansi pemerintah, setiap pengalaman memperkuat kemampuan saya dalam berpikir kreatif, menyusun konsep, dan bekerja secara terstruktur.",
-  photo: "/images/risma-5.webp",
+  story: "Perjalanan saya dimulai dari latar belakang Multimedia di SMK yang kemudian berkembang melalui berbagai pengalaman organisasi dan kepanitiaan di kampus. Dari menjadi Staff Humas, Publikasi, dan Dokumentasi hingga terlibat dalam proyek company profile instansi pemerintah, setiap pengalaman memperkuat kemampuan saya dalam berpikir kreatif dan terstruktur.",
+  photo: "/riss-pink.png",
   stats: [
     { value: "3+", label: "Tahun Pengalaman" },
     { value: "4+", label: "Proyek Besar" },
