@@ -41,12 +41,16 @@ export interface PortfolioItem {
   category: PortfolioCategory;
   client: string;
   image: string;
+  description?: string;
   instagram?: string;
   youtube?: string;
   tiktok?: string;
+  tiktokThumbnail?: boolean;
+  orientation?: "landscape" | "portrait";
+  imageAspectRatio?: string;
 }
 
-export type PortfolioCategory = "All" | "Data Analyst Intern" | "Student Employee – Tim Kreatif" | "Staff Humas, Publikasi, & Dokumentasi (HPD)" | "Assistant Director (Visual)";
+export type PortfolioCategory = "Videography" | "Design" | "Photography";
 
 export interface InstagramPost {
   id: number;

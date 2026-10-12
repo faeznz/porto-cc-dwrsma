@@ -5,34 +5,46 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import { profile } from "@/data/profile";
 
+function renderRichText(text: string) {
+  return text.split(/(\*\*[^*]+\*\*)/g).map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={i} className="font-semibold text-dark">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return <span key={i}>{part}</span>;
+  });
+}
+
 export default function About() {
   return (
     <SectionWrapper
       id="about"
-      title="About Me"
+       title="Who am I"
       subtitle="Get to know me better"
     >
-      <div className="grid md:grid-cols-2 gap-12 items-center">
+       <div className="grid md:grid-cols-[0.85fr_1.15fr] gap-8 items-center">
         <ScrollReveal direction="left">
           <div className="relative">
-            <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden">
+            <div className="relative w-full aspect-[4/5] overflow-hidden bg-[#fffaf0] border border-primary/40">
               <Image
-                src={profile.photo}
+                src="/images/risma-about.webp"
                 alt={`${profile.name} portrait`}
                 fill
-                className="object-cover"
+                className="object-contain object-bottom"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-secondary rounded-full -z-10" />
-            <div className="absolute -top-4 -left-4 w-16 h-16 bg-accent rounded-full -z-10" />
+            <span aria-hidden="true" className="absolute -bottom-5 -right-3 text-secondary text-7xl">✳</span>
           </div>
         </ScrollReveal>
 
         <ScrollReveal direction="right" className="space-y-6">
           {profile.bio.map((paragraph, i) => (
             <p key={i} className="text-gray-600 leading-relaxed">
-              {paragraph}
+              {renderRichText(paragraph)}
             </p>
           ))}
 

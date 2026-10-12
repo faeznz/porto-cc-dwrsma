@@ -19,17 +19,17 @@ export default function SectionWrapper({
   subtitle,
 }: SectionWrapperProps) {
   return (
-    <section id={id} className={`py-16 md:py-24 px-4 ${className}`}>
+    <section id={id} className={`editorial-section py-12 md:py-16 px-5 md:px-10 ${className}`}>
       <div className="max-w-6xl mx-auto">
         {(title || subtitle) && (
-          <ScrollReveal className="mb-12 md:mb-16 text-center">
+          <ScrollReveal className="section-heading mb-8 md:mb-10">
             {title && (
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-4">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-normal text-primary mb-2 uppercase">
                 {title}
               </h2>
             )}
             {subtitle && (
-              <p className="text-gray-500 max-w-2xl mx-auto text-lg">
+              <p className="font-script text-secondary text-4xl md:text-5xl">
                 {subtitle}
               </p>
             )}

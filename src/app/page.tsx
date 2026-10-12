@@ -5,7 +5,6 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Portfolio from "@/components/Portfolio";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const Experience = dynamic(() => import("@/components/Experience"), {
@@ -17,13 +16,12 @@ import SmoothScroll from "@/components/SmoothScroll";
 export default function Home() {
   return (
     <SmoothScroll>
-      <main className="min-h-screen">
+      <main className="editorial-page min-h-screen">
         <Hero />
         <About />
         <Experience />
         <Skills />
         <Portfolio />
-        <Contact />
         <Footer />
       </main>
     </SmoothScroll>
