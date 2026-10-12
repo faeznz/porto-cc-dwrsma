@@ -1,0 +1,12 @@
+   ▲ Next.js 15.5.20
+   - Local:        http://localhost:3459
+   - Network:      http://192.168.0.107:3459
+
+ ✓ Starting...
+ ✓ Ready in 6.4s
+   ▲ Next.js 15.5.20
+   - Local:        http://localhost:3459
+   - Network:      http://192.168.0.107:3459
+
+ ✓ Starting...
+ ✓ Ready in 7s

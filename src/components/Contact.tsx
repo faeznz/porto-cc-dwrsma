@@ -9,6 +9,7 @@ import {
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import { profile } from "@/data/profile";
+import Image from "next/image";
 
 const contacts = [
   {
@@ -41,11 +42,16 @@ export default function Contact() {
   return (
     <SectionWrapper
       id="contact"
-      title="Let's Work Together"
-      subtitle="Have a project in mind? Let's make it happen"
+      title="Contact Me"
+      subtitle="Let's make something lovely"
       className="bg-white"
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="grid md:grid-cols-[0.7fr_1.3fr] gap-8 items-center">
+        <div className="relative h-80 md:h-[440px] bg-[#fffaf0] overflow-hidden">
+          <Image src="/images/risma-4.webp" alt="Dewi Rismawati, ready to collaborate" fill sizes="(max-width: 768px) 100vw, 35vw" className="object-contain object-bottom" />
+          <span className="absolute bottom-3 left-4 font-script text-secondary text-5xl">Say hello!</span>
+        </div>
+        <div>
         <div className="grid md:grid-cols-2 gap-6">
           {contacts.map((item, index) => {
             const Icon = item.icon;
@@ -84,6 +90,7 @@ export default function Contact() {
             <Mail size={20} />
           </a>
         </ScrollReveal>
+        </div>
       </div>
     </SectionWrapper>
   );

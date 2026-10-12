@@ -9,14 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#FF6B6B",
-        secondary: "#4ECDC4",
-        accent: "#FFE66D",
-        background: "#FAFAFA",
-        dark: "#222222",
+        primary: "#F3D982",
+        secondary: "#F3B8CB",
+        accent: "#FFF1BE",
+        background: "#FFFFFF",
+        dark: "#34332F",
       },
       fontFamily: {
-        heading: ["Outfit", "sans-serif"],
+        heading: ["Bebas Neue", "sans-serif"],
+        script: ["Mrs Saint Delafield", "cursive"],
         body: ["Plus Jakarta Sans", "sans-serif"],
       },
       animation: {

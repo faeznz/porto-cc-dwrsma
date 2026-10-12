@@ -1,45 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowDown, Mail } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { FaInstagram, FaTiktok, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import { profile } from "@/data/profile";
 
 export default function Hero() {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const heroRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (heroRef.current) {
-        const rect = heroRef.current.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;
-        const y = (e.clientY - rect.top) / rect.height - 0.5;
-        setMousePos({ x, y });
-      }
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => { window.removeEventListener("mousemove", handleMouseMove); };
-  }, []);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
-  };
-
   return (
     <section
       ref={heroRef}
